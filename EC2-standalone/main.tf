@@ -3,4 +3,5 @@ resource "aws_instance" "EC2" {
   instance_type   = "t2.micro"
   key_name        = "${var.key_name}"
   security_groups = ["${var.security_groups}"]
+  user_data       = "${var.user_data}"
 }
