@@ -5,6 +5,7 @@ resource "aws_instance" "dc_test_box" {
   instance_type        = "t2.micro"
   iam_instance_profile = "docker-logs"
   key_name             = "rickyg"
+  security_groups      = ["launch-wizard-4"]
 }
 
 output "public_dns" {
