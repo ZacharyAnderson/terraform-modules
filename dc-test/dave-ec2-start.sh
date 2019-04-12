@@ -1,6 +1,6 @@
 #!/bin/bash
-
 sudo yum update -y
+sudo yum install git -y
 sudo yum remove -y docker \
                   docker-client \
                   docker-client-latest \
@@ -30,5 +30,6 @@ sudo docker run -d --log-driver=awslogs --log-opt awslogs-region="us-west-2" \
 sudo docker run -d --log-driver=awslogs --log-opt awslogs-region="us-west-2" \
                     --log-opt awslogs-group="docker-logs" --log-opt awslogs-stream="docker2" dc-test
 sudo docker run -d --log-driver=awslogs --log-opt awslogs-region="us-west-2" \
-                    --log-opt awslogs-group="docker-logs" --log-opt awslogs-stream="docker3" dc-test                   
+                    --log-opt awslogs-group="docker-logs" --log-opt awslogs-stream="docker3" dc-test     
 
+              
